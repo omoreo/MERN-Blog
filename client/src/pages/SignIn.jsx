@@ -38,12 +38,12 @@ const SignIn = () => {
               />
             </div>
             <Button color='dark' className='rounded-none bg-white text-black border-solid border-2 border-black hover:text-white' type='submit'>
-              Sign In
+              Sign in
             </Button>
           </form>
           <div className="flex gap-2 text-sm mt-5">
-            <span>Didn't have an account ?</span>
-            <Link to='/sign-Up' className='text-blue-500'>Sign Up</Link>
+            <span>Dont have an account ?</span>
+            <Link to='/sign-up' className='text-blue-500'>Sign up</Link>
           </div>
         </div>
       </div>
