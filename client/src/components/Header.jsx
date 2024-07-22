@@ -30,7 +30,7 @@ export default function Header() {
           <Button className='w-12 h-11 hidden sm:inline rounded-none' color="gray" pill>
             <FaMoon />
           </Button>
-          <Link to='/sign-in'>
+          <Link to='/signin'>
             <Button color="dark" className='rounded-none border-solid border-2 border-black bg-white text-black hover:bg-black hover:text-white'>Sign in</Button>
           </Link>
           <Navbar.Toggle />
