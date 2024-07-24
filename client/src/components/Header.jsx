@@ -1,11 +1,13 @@
-import { Button, Navbar, TextInput } from 'flowbite-react'
+import { Avatar, Button, Dropdown, Navbar, TextInput } from 'flowbite-react'
 import { Link, useLocation } from 'react-router-dom'
 import { AiOutlineSearch } from 'react-icons/ai'
 import { FaMoon } from 'react-icons/fa'
+import { useSelector } from 'react-redux'
 
 export default function Header() {
 
   const path = useLocation().pathname;
+  const { currentUser } = useSelector(state => state.user);
 
   return (
     <Navbar className='border-b-2 font-outfit'>
@@ -30,9 +32,37 @@ export default function Header() {
           <Button className='w-12 h-11 hidden sm:inline rounded-none' color="gray" pill>
             <FaMoon />
           </Button>
-          <Link to='/signin'>
-            <Button color="dark" className='rounded-none border-solid border-2 border-black bg-white text-black hover:bg-black hover:text-white'>Sign in</Button>
-          </Link>
+          { currentUser ? (
+            <Dropdown
+              arrowIcon={false}
+              inline
+              label={
+                  <Avatar 
+                    alt='user avatar'
+                    img={currentUser.profilePicure}
+                    className='border-solid border border-gray-200 rounded-none'
+                  />
+                }
+            >
+              <Dropdown.Header>
+                <span className='block text-sm'>@{ currentUser.username }</span>
+                <span className='block text-sm font-medium truncate'>@{ currentUser.email }</span>
+                <Link to={'/dashboard?tab=profile'}>
+                  <Dropdown.Item>Profile</Dropdown.Item>
+                </Link>
+                <Link>
+                  <Dropdown.Divider />
+                  <Dropdown.Item>Sign out</Dropdown.Item>
+                </Link>
+              </Dropdown.Header>
+            </Dropdown>
+          ) :
+            (
+              <Link to='/signin'>
+                <Button color="dark" className='rounded-none border-solid border-2 border-black bg-white text-black hover:bg-black hover:text-white'>Sign in</Button>
+              </Link>
+            )
+          }
           <Navbar.Toggle />
         </div>
           <Navbar.Collapse>
