@@ -14,18 +14,18 @@ export default function Header() {
 
   return (
     <Navbar className='border-b-2 font-outfit'>
-        <Link to="/" className='self-center whitespace-nowrap text-sm sm:text-xl font-medium dark:text-white'>
-          <span className='px-2 py-2 border-solid border-2 border-black text-black bg-white'>
+        <Link to="/" className='self-center whitespace-nowrap text-sm sm:text-xl font-medium'>
+          <span className='px-2 py-2 border-solid border-2 border-black text-black bg-white dark:text-white dark:bg-black dark:border-white'>
             Blog-web
           </span>
         </Link>
-        <form>
+        <form className='border-solid border-2 border-black dark:border-white'>
           <TextInput
             type='text'
             placeholder='Search...'
             rightIcon={AiOutlineSearch}
+            style={{ borderRadius: '0px' }}
             className='hidden lg:inline'
-            style={{ borderRadius: '0px', border: '2px solid black' }}
           />
         </form>
         <Button className='w-12 h-10 lg:hidden' color='gray' pill>
@@ -38,7 +38,7 @@ export default function Header() {
             pill 
             onClick={() => dispatch(toggleTheme())}
           >
-            { theme === 'light' ? <FaMoon /> : <FaSun className='text-orange-500' /> }
+            { theme === 'light' ? <FaMoon /> : <FaSun className='text-white' /> }
             {/* <FaMoon /> */}
           </Button>
           { currentUser ? (

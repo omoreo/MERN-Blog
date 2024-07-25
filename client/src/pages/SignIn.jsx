@@ -49,11 +49,11 @@ const SignIn = () => {
 
   return (
     <div className='min-h-screen mt-20 font-outfit'>
-      <div className='flex p-10 max-w-3xl mx-auto flex-col md:flex-row md:items-center gap-5 border-solid border border-black'>
+      <div className='flex p-10 max-w-3xl mx-auto flex-col md:flex-row md:items-center gap-5 border-solid border border-black dark:border-white'>
         {/* Left */}
         <div className="flex-1">
           <Link to='/' className="font-bold dark:text-white text-4xl">
-          <span className='px-2 py-2 border-solid border-2 border-black text-black'>
+          <span className='px-2 py-2 border-solid border-2 border-black dark:border-white dark:text-white text-black'>
             Blog-web
           </span>
           </Link>
@@ -65,26 +65,28 @@ const SignIn = () => {
         <div className="flex-1">
           <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
             <div>
-              <Label value="Your email" />
+              {/* <Label value="Your email" /> */}
               <TextInput 
                 type="email"
                 placeholder="name@example.com"
                 id="email"
                 style={{ borderRadius: '0px' }}
+                className='border-solid border border-black dark:border-white dark:text-white text-black'
                 onChange={handleChange}
               />
             </div>
             <div>
-              <Label value="Your password" />
+              {/* <Label value="Your password" /> */}
               <TextInput 
                 type="password"
                 placeholder="Password"
                 id="password"
                 style={{ borderRadius: '0px' }}
+                className='border-solid border border-black dark:border-white dark:text-white text-black'
                 onChange={handleChange}
               />
             </div>
-            <Button color='dark' className='rounded-none bg-white text-black border-solid border border-black hover:text-white' type='submit' disabled={loading}>
+            <Button color='dark' className='rounded-none bg-white text-black border-solid border border-black hover:text-white dark:text-white dark:border-white' type='submit' disabled={loading}>
               {
                 loading ? (
                   <>
@@ -98,7 +100,7 @@ const SignIn = () => {
           </form>
           <div className="flex gap-2 text-sm mt-5">
             <span>Don't Have an account ?</span>
-            <Link to='/signup' className='text-blue-500'>Sign up</Link>
+            <Link to='/signup' className='text-blue-500 hover:drop-shadow-sm'>Sign up</Link>
           </div>
           {
             errorMessage && (

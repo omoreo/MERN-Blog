@@ -9,7 +9,7 @@ const FooterCom = () => {
           <div className='grid w-full justify-between sm:flex md:gird-cols-1'>
             <div className='mt-5'>
             <Link to="/" className='self-center whitespace-nowrap text-lg sm:text-xl font-medium dark:text-white'>
-              <span className='px-2 py-2 border-solid border-2 border-black text-black bg-white'>
+              <span className='px-2 py-2 border-solid border-2 border-black text-black bg-white dark:text-white dark:bg-black dark:border-white'>
                 Blog-web
               </span>
             </Link>
@@ -76,13 +76,13 @@ const FooterCom = () => {
             <Footer.Copyright href="#" by="My Blog" year={new Date().getFullYear()} />
             <div className='flex gap-6 sm:mt-0 mt-4 sm:justify-center'>
               <div className='hover:scale-125 ease-in duration-300'>
-                <Footer.Icon href="#" icon={BsFacebook} className='text-gray-600 hover:text-blue-600 ease-out hover:ease-in-out duration-800' />
+                <Footer.Icon href="#" icon={BsFacebook} className='text-gray-600 hover:text-blue-600 ease-out hover:ease-in-out duration-800 dark:text-white dark:hover:text-blue-600' />
               </div>
               <div className='hover:scale-125 ease-in duration-300'>
-                <Footer.Icon href="#" icon={BsInstagram} className='text-gray-600 hover:text-pink-400' />
+                <Footer.Icon href="#" icon={BsInstagram} className='text-gray-600 hover:text-pink-400 dark:text-white dark:hover:text-pink-400' />
               </div>
               <div className='hover:scale-125 ease-in duration-300'>
-                <Footer.Icon href="#" icon={BsGithub} className='text-gray-600 hover:text-gray-800 easeo-ut hover:ease-in duration-800 '/>
+                <Footer.Icon href="#" icon={BsGithub} className='text-gray-600 hover:text-gray-800 easeo-ut hover:ease-in duration-800 dark:text-white '/>
               </div>
             </div>
           </div>
