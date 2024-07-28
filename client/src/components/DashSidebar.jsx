@@ -30,6 +30,8 @@ export default function DashSidebar() {
               label={'User'} 
               labelColor='dark' 
               className='rounded-none'
+              as="div"
+              
             >
               Profile
             </Sidebar.Item>
