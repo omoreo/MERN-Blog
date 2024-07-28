@@ -1,7 +1,7 @@
 import { Avatar, Button, Dropdown, Navbar, TextInput } from 'flowbite-react'
 import { Link, useLocation } from 'react-router-dom'
 import { AiOutlineSearch } from 'react-icons/ai'
-import { FaMonero, FaMoon, FaSun } from 'react-icons/fa'
+import { FaMoon, FaSun } from 'react-icons/fa'
 import { useSelector, useDispatch } from 'react-redux'
 import { toggleTheme } from '../redux/theme/themeSlice'
 
@@ -19,7 +19,7 @@ export default function Header() {
             Blog-web
           </span>
         </Link>
-        <form className='border-solid border-2 border-black dark:border-white'>
+        <form className='border-solid border border-black dark:border-white'>
           <TextInput
             type='text'
             placeholder='Search...'
@@ -48,7 +48,7 @@ export default function Header() {
               label={
                   <Avatar 
                     alt='user avatar'
-                    img={currentUser.profilePicure}
+                    img={currentUser.profilePicture}
                     className='border-solid border border-gray-200 rounded-none'
                   />
                 }
