@@ -226,7 +226,7 @@ export default function Dashprofile() {
           className="border border-solid border-black dark:border-white"
           onChange={ handleChange }
         />
-        <Button 
+        <Button
           type='submit' 
           color='dark' 
           style={{ borderRadius: '0px' }} 
