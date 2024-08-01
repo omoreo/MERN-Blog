@@ -15,7 +15,7 @@ export default function Header() {
 
   const handleSignout = async () => {
     try {
-      const res = await fetch('/api/user/signout', {
+      const res = await fetch('/api/user/sign-out', {
         method: 'POST',
       });
       const data = await res.json();
@@ -84,8 +84,8 @@ export default function Header() {
             </Dropdown>
           ) :
             (
-              <Link to='/signin'>
-                <Button color="dark" className='rounded-none border-solid border-2 border-black bg-white text-black hover:bg-black hover:text-white'>Sign in</Button>
+              <Link to='/sign-in'>
+                <Button color="dark" className='rounded-none border-solid border-2 border-black bg-white text-black dark:text-white dark:hover:text-gray-500 hover:bg-black hover:text-white'>Sign in</Button>
               </Link>
             )
           }

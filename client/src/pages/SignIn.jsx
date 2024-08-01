@@ -25,7 +25,7 @@ const SignIn = () => {
 
     try {
       dispatch(signInStart());
-      const res = await fetch('/api/auth/signin', {
+      const res = await fetch('/api/auth/sign-in', {
         method: 'POST',
         headers: {'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -100,7 +100,7 @@ const SignIn = () => {
           </form>
           <div className="flex gap-2 text-sm mt-5">
             <span>Don't Have an account ?</span>
-            <Link to='/signup' className='text-blue-500 hover:drop-shadow-sm'>Sign up</Link>
+            <Link to='/sign-up' className='text-blue-500 hover:drop-shadow-sm'>Sign up</Link>
           </div>
           {
             errorMessage && (
