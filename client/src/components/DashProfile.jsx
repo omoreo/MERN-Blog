@@ -242,7 +242,7 @@ export default function Dashprofile() {
               <Button
                 type="button"
                 color='dark'
-                className="w-full"
+                className="w-full rounded-none bg-white text-black border-black hover:text-white dark:border-white dark:text-white"
                 >
                 Create a post 
               </Button>
