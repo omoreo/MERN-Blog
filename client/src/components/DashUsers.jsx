@@ -66,7 +66,7 @@ export default function DashUsers() {
       } else {
         console.log(data.message);
       }
-
+ 
     } catch (error) {
       console.log(error.message);
       
